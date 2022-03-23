@@ -57,6 +57,16 @@ function imprimir() {
     console.log(2);
 }
 
-window.onscroll = function() {
+/* window.onscroll = function() {
     console.log('scroling...');
-}
+} */
+
+// Seleccionar elemento y asociarle un evento
+const btnEnviar = document.querySelector('.boton--primario');
+btnEnviar.addEventListener('click', function(evento) {
+    console.log(evento);
+    evento.log(evento.preventDefault()); // el 'prevent' detiene el envio
+    console.log('enviando formulario');  // es especialemente útil para formularios 
+    // Sirve para VALIDAR un formulario primero
+
+});
