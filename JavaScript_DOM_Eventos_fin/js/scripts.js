@@ -33,3 +33,30 @@ const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
 
 console.log(nuevoEnlace);
+
+//EVENTOS 
+console.log(1);
+
+/* window.addEventListener('load', function() {  // load espera a que JS y los Archs. esten listos
+    console.log(2);
+}); */
+window.addEventListener('load', imprimir);
+
+window.onload = function() {
+    console.log(3);
+}
+
+document.addEventListener('DOMContentLoaded', function(){  // Solo espera al HTML, pero no espera a CSS ni imagenes.
+    console.log(4)
+}); // RECOMENDADO para acelerar la carga de la página
+
+
+console.log(5);
+
+function imprimir() {
+    console.log(2);
+}
+
+window.onscroll = function() {
+    console.log('scroling...');
+}
