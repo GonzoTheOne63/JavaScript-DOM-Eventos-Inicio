@@ -61,7 +61,7 @@ function imprimir() {
     console.log('scroling...');
 } */
 
-// Seleccionar elemento y asociarle un evento
+// Seleccionar elemento y asociarle un event
 const btnEnviar = document.querySelector('.boton--primario');
 btnEnviar.addEventListener('click', function(evento) {
     console.log(evento);
@@ -70,3 +70,44 @@ btnEnviar.addEventListener('click', function(evento) {
     // Sirve para VALIDAR un formulario primero
 
 });
+
+// Eventos de los Inputs y Textarea
+/* const nombre = document.querySelector('#nombre'); */
+/* const email = document.querySelector('#email'); */
+/* const mensaje = document.querySelector('#mensaje'); */
+/* nombre.addEventListener('input', function() { */
+/* nombre.addEventListener('input', function(event) { */
+
+/* nombre.addEventListener('change', function() { */
+    /* console.log(event.target.value)
+}); */
+
+/* email.addEventListener('input', function(event) {
+    console.log(event.target.value)
+});
+
+mensaje.addEventListener("input", function (event) {
+  console.log(event.target.value);
+}); */
+
+const datos = {  // RECOMENDADO para el llenado de formularios
+    nombre: '',
+    email: '',
+    mensaje: '',
+}
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector("#email");
+const mensaje = document.querySelector("#mensaje");
+
+nombre.addEventListener('input', leerTexto);
+email.addEventListener('input', leerTexto);
+mensaje.addEventListener('input', leerTexto);
+
+function leerTexto(event) {
+    /* console.log(event.target.value); */
+    datos[event.target.id] = event.target.value;
+
+    /* console.log(event.target); */
+    console.log(datos);
+}
