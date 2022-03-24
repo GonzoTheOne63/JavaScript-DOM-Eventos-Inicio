@@ -234,16 +234,20 @@ img {
     background-repeat: no-repeat;
 }
 .error {
-    background-color: rgb(185, 0, 0);
+    background-color: rgb(250, 34, 45);
     padding: 1rem .5rem;
     text-align: center;
     color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .correcto {
-    background-color: rgb(74, 185, 0);
+    background-color: rgb(22, 180, 7);
     padding: 1rem .5rem;
     text-align: center;
     color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .formulario {
