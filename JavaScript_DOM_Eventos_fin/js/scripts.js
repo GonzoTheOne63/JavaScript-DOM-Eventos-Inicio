@@ -62,14 +62,15 @@ function imprimir() {
 } */
 
 // Seleccionar elemento y asociarle un event
-const btnEnviar = document.querySelector('.boton--primario');
+/* const btnEnviar = document.querySelector('.boton--primario');
 btnEnviar.addEventListener('click', function(evento) {
     console.log(evento);
     evento.log(evento.preventDefault()); // el 'prevent' detiene el envio
     console.log('enviando formulario');  // es especialemente útil para formularios 
     // Sirve para VALIDAR un formulario primero
 
-});
+}); */
+
 
 // Eventos de los Inputs y Textarea
 /* const nombre = document.querySelector('#nombre'); */
@@ -99,10 +100,20 @@ const datos = {  // RECOMENDADO para el llenado de formularios
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector("#email");
 const mensaje = document.querySelector("#mensaje");
+const formulario = document.querySelector(".formulario");
 
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+formulario.addEventListener('submit', function(event) {  // EVENT de Submit
+    event.preventDefault();
+
+    //VALIDAR el formulario
+
+    //ENVIAR el formulario
+
+    console.log('Enviando Formulario');
+})
 
 function leerTexto(event) {
     /* console.log(event.target.value); */
@@ -111,3 +122,4 @@ function leerTexto(event) {
     /* console.log(event.target); */
     console.log(datos);
 }
+
